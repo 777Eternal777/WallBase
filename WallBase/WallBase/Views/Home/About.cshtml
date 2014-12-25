@@ -1,0 +1,94 @@
+﻿
+<!DOCTYPE html>
+
+<body class="startpage">
+
+
+    <a id="top"></a>
+
+    <div id="wrapper">
+        <main id="main">
+
+
+            <div id="startpage-bg" style="background-image:url(../Content/images/layout/blue-gradients.020-wh.jpg)"></div>
+
+
+            <div class="left">
+                <a id="brand" href="index.html"><h1 class="logo"><img src="~/Content/images/layout/logo.png"></h1><h2 class="slogan">The best wallpapers on the Net!</h2></a><nav id="startpage-menu"><ul><li><a class="latest" href="latest.html"><i class="fa fa-lg fa-clock-o"></i><span>Latest</span></a></li><li><a class="random" href="random.html"><i class="fa fa-lg fa-random"></i><span>Random</span></a></li><li><a class="upload" href="auth/login.html"><i class="fa fa-lg fa-upload"></i><span>Upload</span></a></li><li><a class="comments" href="comments.html"><i class="fa fa-lg fa-comments-o "></i><span>Comments</span></a></li></ul></nav><nav id="startpage-search">
+                    <form method="GET" action="http://alpha.wallhaven.cc/search" accept-charset="UTF-8" id="search">
+                        <fieldset class="oneline">
+                            <div>
+                                <input type="search" id="search-text"
+                                       name="q" placeholder="Search..." autofocus="autofocus" />
+                            </div><button class="icon-button"><i class="fa fa-search"></i></button>
+                        </fieldset>
+                    </form>
+                </nav><div id="featured"><div class="row-of-4"><a href="wallpaper/100101.html"><img src="../wallpapers.wallhaven.cc/wallpapers/thumb/small/th-100101.jpg" alt=""></a><a href="wallpaper/92156.html"><img src="../wallpapers.wallhaven.cc/wallpapers/thumb/small/th-92156.jpg" alt=""></a><a href="wallpaper/59487.html"><img src="../wallpapers.wallhaven.cc/wallpapers/thumb/small/th-59487.jpg" alt=""></a><a href="wallpaper/81026.html"><img src="../wallpapers.wallhaven.cc/wallpapers/thumb/small/th-81026.jpg" alt=""></a></div><div class="row-of-7"><a href="wallpaper/69737.html"><img src="../wallpapers.wallhaven.cc/wallpapers/thumb/small/th-69737.jpg" alt=""></a><a href="wallpaper/79573.html"><img src="../wallpapers.wallhaven.cc/wallpapers/thumb/small/th-79573.jpg" alt=""></a><a href="wallpaper/416.html"><img src="../wallpapers.wallhaven.cc/wallpapers/thumb/small/th-416.jpg" alt=""></a><a href="wallpaper/65456.html"><img src="../wallpapers.wallhaven.cc/wallpapers/thumb/small/th-65456.jpg" alt=""></a><a href="wallpaper/78372.html"><img src="../wallpapers.wallhaven.cc/wallpapers/thumb/small/th-78372.jpg" alt=""></a><a href="wallpaper/33246.html"><img src="../wallpapers.wallhaven.cc/wallpapers/thumb/small/th-33246.jpg" alt=""></a><a href="wallpaper/76587.html"><img src="../wallpapers.wallhaven.cc/wallpapers/thumb/small/th-76587.jpg" alt=""></a></div><div class="row-of-3"><a href="wallpaper/75566.html"><img src="../wallpapers.wallhaven.cc/wallpapers/thumb/small/th-75566.jpg" alt=""></a><a href="wallpaper/74042.html"><img src="../wallpapers.wallhaven.cc/wallpapers/thumb/small/th-74042.jpg" alt=""></a><a href="wallpaper/73452.html"><img src="../wallpapers.wallhaven.cc/wallpapers/thumb/small/th-73452.jpg" alt=""></a></div><div class="row-of-5"><a href="wallpaper/72375.html"><img src="../wallpapers.wallhaven.cc/wallpapers/thumb/small/th-72375.jpg" alt=""></a><a href="wallpaper/66162.html"><img src="../wallpapers.wallhaven.cc/wallpapers/thumb/small/th-66162.jpg" alt=""></a><a href="wallpaper/65310.html"><img src="../wallpapers.wallhaven.cc/wallpapers/thumb/small/th-65310.jpg" alt=""></a><a href="wallpaper/107.html"><img src="../wallpapers.wallhaven.cc/wallpapers/thumb/small/th-107.jpg" alt=""></a><a href="wallpaper/65146.html"><img src="../wallpapers.wallhaven.cc/wallpapers/thumb/small/th-65146.jpg" alt=""></a></div></div>
+            </div><div class="right">
+                <div class="startpage-box">
+                    <p>
+                        <strong>Alpha Notice:</strong>
+                        We are expecting to start fresh at the end of the alpha phase. The alpha is only intended as a sneak peak and a quick and dirty bug test.
+                    </p>
+                </div><form method="POST" action="http://alpha.wallhaven.cc/auth/login" accept-charset="UTF-8" class="startpage-box" id="login">
+                    <input name="_token" type="hidden" value="4pZuEFhkBeov2kMsmDqCs3SbzkGEoc5daPlaZfBq"><h3>
+                        <i class="fa fa-fw fa-lock"></i> Login
+                    </h3><fieldset class="left"><label for="username"><i class="fa fa-fw fa-user"></i></label><input id="username" placeholder="User Name" required="required" name="username" type="text"></fieldset><fieldset class="right"><label for="password"><i class="fa fa-fw fa-key"></i></label><input id="password" placeholder="Password" required="required" name="password" type="password" value=""></fieldset><button type="submit"><i class="fa fa-sign-in"></i> Login</button>
+                </form><form method="POST" action="http://alpha.wallhaven.cc/user" accept-charset="UTF-8" class="startpage-box" id="register"><input name="_token" type="hidden" value="4pZuEFhkBeov2kMsmDqCs3SbzkGEoc5daPlaZfBq"><h3><i class="fa fa-fw fa-send"></i> Register</h3><fieldset><label for="username"><i class="fa fa-fw fa-user"></i></label><input placeholder="User Name" required="required" name="username" type="text"></fieldset><fieldset><label for="email"><i class="fa fa-fw fa-envelope"></i></label><input placeholder="Email" required="required" name="email" type="email"></fieldset><fieldset class="left"><label for="password"><i class="fa fa-fw fa-key"></i></label><input placeholder="Password" required="required" name="password" type="password" value=""></fieldset><fieldset class="right"><label for="password_confirmation"><i class="fa fa-fw fa-key"></i></label><input placeholder="Repeat Password" required="required" name="password_confirmation" type="password" value=""></fieldset><button type="submit"><i class="fa fa-check"></i> Register</button></form>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <a class="to-top" href="#top" title="Back to top"><i class="fa fa-lg fa-chevron-up"></i></a><p class="copyright">
+                <a href="about.html#Copyright">All images remain property of their original owners.</a>
+                Site &amp; code &copy; <a href="index.html">wallhaven.cc</a> 2014.
+            </p><p class="social">
+                <a title="Facebook" href="http://facebook.com/wallhavencc" target="_blank"><i class="fa fa-lg fa-facebook"></i></a><a title="Google+" href="https://google.com/+WallhavenCcc" target="_blank"><i class="fa fa-lg fa-google-plus"></i></a><a title="Twitter" href="http://twitter.com/wallhaven" target="_blank"><i class="fa fa-lg fa-twitter"></i></a><a class="irc" title="IRC" target="_blank"
+                                                                                                                                                                                                                                                                                                                                                                          href="https://qchat.rizon.net/?channels=#wallhaven"><!-- <i class="icon irc"></i> --><i class="fa fa-lg fa-comments"></i><span class="channel">#wallhaven</span><span class="server">irc.rizon.net</span></a><a class="irc-direct" title="IRC Direct"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          href="irc://irc.rizon.net/wallhaven"><i class="fa fa-slack"></i><i class="fa fa-exclamation"></i></a>
+            </p><nav class="footermenu"><a href="auth/login.html">upload</a><a href="latest.html">latest</a><a href="tags.html">tags</a><a href="comments.html">comments</a><a href="about.html">about</a><a href="faq.html">faq</a><a href="rules.html">rules</a><a href="team.html">team</a><a href="contact.html">contact</a></nav>
+        </footer>
+    </div>
+
+    <span class="ribbon ribbon-bottom-right ribbon-red">Alpha</span>
+    <div id="overlay" class="overlay-hidden">
+        <section class="overlay-inner">
+            <header>
+                <h1>Message</h1>
+                <a class="jsAnchor overlay-close" id="overlay-close" title="Close">
+                    <i class="fa fa-times"></i>
+                </a>
+            </header>
+            <div class="overlay-content">
+            </div>
+        </section>
+    </div>
+
+    <script src="~/Scripts/code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <script src="~/Scripts/code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+
+    <script src="~/Scripts/WallHaven/build.min.js"></script>
+
+
+
+
+    <script>
+/*<![CDATA[*/
+        // hide notifications after 5 seconds and on click
+        window.setTimeout(
+                function () {
+                    $('#notifications').fadeOut();
+                },
+                5000
+        );
+        $('#notifications').one('click', function () {
+            $(this).fadeOut();
+        });
+
+
+        /*]]>*/</script>
+</body>
+
+<!-- Mirrored from alpha.wallhaven.cc/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 16 Nov 2014 12:51:16 GMT -->

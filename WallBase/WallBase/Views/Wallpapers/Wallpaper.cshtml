@@ -1,0 +1,406 @@
+﻿@model WallBase.Models.ImageModel
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from alpha.wallhaven.cc/wallpaper/78372 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Nov 2014 20:59:14 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<body class="base">
+
+    <header id="header">
+        <nav>
+            <h1>
+                <a href="../index.html">
+                    <img src="../../static.wallhaven.cc/images/layout/logo_sm.png" alt="wallhaven">
+                    <span>Wallhaven</span>
+                </a>
+            </h1>
+
+
+            <div id="userpanel">
+                <a class="button register" href="../user/create.html">
+                    <!-- <i class="fa fa-coffee"></i> -->
+                    Register
+                </a>
+                <a class="button" href="../auth/login.html">
+                    <!-- <i class="fa fa-sign-in"></i> -->
+                    Login
+                </a>
+            </div>
+
+
+            <ul id="topmenu">             <li><a class="latest" href="../latest.html"><i class="fa fa-lg fa-clock-o"></i><span>Latest</span></a></li><li><a class="random" href="../random.html"><i class="fa fa-lg fa-random"></i><span>Random</span></a></li><li><a class="upload" href="../auth/login.html"><i class="fa fa-lg fa-upload"></i><span>Upload</span></a></li><li><a class="comments" href="../comments.html"><i class="fa fa-lg fa-comments-o "></i><span>Comments</span></a></li><li><a class="search jsAnchor" id="searchbar-toggle"><i class="fa fa-lg fa-search"></i><span>Search</span></a></li>        </ul>
+        </nav>
+    </header>
+
+
+
+
+
+
+
+    <div id="searchbar" class="collapsed">
+        <form method="GET" action="http://alpha.wallhaven.cc/search" accept-charset="UTF-8" id="search">
+
+            <fieldset class="oneline">
+                <div>
+                    <input type="search" id="search-text" name="q"
+                           placeholder="Search..." value="" />
+                </div>
+                <button class="icon-button"><i class="fa fa-search"></i></button>
+            </fieldset>
+
+            <fieldset id="search-category-checks">
+                <input id="search-general" checked="checked" name="general" type="checkbox" value="general">
+                <label for="search-general">General</label>
+
+
+                <input id="search-anime" checked="checked" name="anime" type="checkbox" value="anime">
+                <label for="search-anime">Anime</label>
+
+                <input id="search-people" checked="checked" name="people" type="checkbox" value="people">
+                <label for="search-people">People</label>
+            </fieldset>
+
+            <fieldset id="search-purity-checks">
+                <input id="search-sfw" checked="checked" name="sfw" type="checkbox" value="sfw">
+                <label class="purity sfw" for="search-sfw">SFW</label>
+
+                <input id="search-sketchy" checked="checked" name="sketchy" type="checkbox" value="sketchy">
+                <label class="purity sketchy" for="search-sketchy">Sketchy</label>
+
+            </fieldset>
+
+            <fieldset id="search-resolutions">
+                <a class="jsAnchor dropdown-toggle collapsed">Resolution</a>
+                <div class="dropdown collapsed">
+                    <div>
+                        <input id="res-1024x768" class="resolution" name="resolution" type="checkbox" value="1024x768">
+                        <label style="display: block" for="res-1024x768">
+                            1024x768
+                        </label>
+                        <input id="res-1280x800" class="resolution" name="resolution" type="checkbox" value="1280x800">
+                        <label style="display: block" for="res-1280x800">
+                            1280x800
+                        </label>
+                        <input id="res-1366x768" class="resolution" name="resolution" type="checkbox" value="1366x768">
+                        <label style="display: block" for="res-1366x768">
+                            1366x768
+                        </label>
+                        <input id="res-1280x960" class="resolution" name="resolution" type="checkbox" value="1280x960">
+                        <label style="display: block" for="res-1280x960">
+                            1280x960
+                        </label>
+                        <input id="res-1440x900" class="resolution" name="resolution" type="checkbox" value="1440x900">
+                        <label style="display: block" for="res-1440x900">
+                            1440x900
+                        </label>
+                        <input id="res-1600x900" class="resolution" name="resolution" type="checkbox" value="1600x900">
+                        <label style="display: block" for="res-1600x900">
+                            1600x900
+                        </label>
+                        <input id="res-1280x1024" class="resolution" name="resolution" type="checkbox" value="1280x1024">
+                        <label style="display: block" for="res-1280x1024">
+                            1280x1024
+                        </label>
+                        <input id="res-1600x1200" class="resolution" name="resolution" type="checkbox" value="1600x1200">
+                        <label style="display: block" for="res-1600x1200">
+                            1600x1200
+                        </label>
+                        <input id="res-1680x1050" class="resolution" name="resolution" type="checkbox" value="1680x1050">
+                        <label style="display: block" for="res-1680x1050">
+                            1680x1050
+                        </label>
+                        <input id="res-1920x1080" class="resolution" name="resolution" type="checkbox" value="1920x1080">
+                        <label style="display: block" for="res-1920x1080">
+                            1920x1080
+                            <small>Full HD</small>
+                        </label>
+                        <input id="res-1920x1200" class="resolution" name="resolution" type="checkbox" value="1920x1200">
+                        <label style="display: block" for="res-1920x1200">
+                            1920x1200
+                        </label>
+                        <input id="res-2560x1440" class="resolution" name="resolution" type="checkbox" value="2560x1440">
+                        <label style="display: block" for="res-2560x1440">
+                            2560x1440
+                        </label>
+                        <input id="res-2560x1600" class="resolution" name="resolution" type="checkbox" value="2560x1600">
+                        <label style="display: block" for="res-2560x1600">
+                            2560x1600
+                        </label>
+                        <input id="res-3840x1080" class="resolution" name="resolution" type="checkbox" value="3840x1080">
+                        <label style="display: block" for="res-3840x1080">
+                            3840x1080
+                        </label>
+                        <input id="res-5760x1080" class="resolution" name="resolution" type="checkbox" value="5760x1080">
+                        <label style="display: block" for="res-5760x1080">
+                            5760x1080
+                        </label>
+                        <input id="res-3840x2160" class="resolution" name="resolution" type="checkbox" value="3840x2160">
+                        <label style="display: block" for="res-3840x2160">
+                            3840x2160
+                            <small>4k UHD-1</small>
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset id="search-ratios">
+                <a class="jsAnchor dropdown-toggle collapsed">Ratio</a>
+                <div class="dropdown collapsed">
+                    <div>
+                        <input id="ratio-4x3" class="ratio" name="ratio" type="checkbox" value="4x3">
+                        <label style="display: block" for="ratio-4x3">
+                            4x3
+                        </label>
+                        <input id="ratio-5x4" class="ratio" name="ratio" type="checkbox" value="5x4">
+                        <label style="display: block" for="ratio-5x4">
+                            5x4
+                        </label>
+                        <input id="ratio-16x9" class="ratio" name="ratio" type="checkbox" value="16x9">
+                        <label style="display: block" for="ratio-16x9">
+                            16x9
+                        </label>
+                        <input id="ratio-16x10" class="ratio" name="ratio" type="checkbox" value="16x10">
+                        <label style="display: block" for="ratio-16x10">
+                            16x10
+                        </label>
+                        <input id="ratio-32x9" class="ratio" name="ratio" type="checkbox" value="32x9">
+                        <label style="display: block" for="ratio-32x9">
+                            32x9
+                        </label>
+                        <input id="ratio-48x9" class="ratio" name="ratio" type="checkbox" value="48x9">
+                        <label style="display: block" for="ratio-48x9">
+                            48x9
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="oneline">
+                <div>
+                    <select id="search-sorting" title="Sorting">
+                        <option value="relevance" selected="selected">
+                            Relevance
+                        </option>
+                        <option value="random">
+                            Random
+                        </option>
+                        <option value="date_added">
+                            Date Added
+                        </option>
+                        <option value="views">
+                            Views
+                        </option>
+                        <option value="favorites">
+                            Favorites
+                        </option>
+                    </select>
+                </div>
+
+                <input id="search-order" checked="checked" name="order" type="checkbox" value="desc">
+                <label class="icon-button" for="search-order"></label>
+            </fieldset>
+
+            <button class="button" id="search-submit"><i class="fa fa-refresh fa-fw"></i></button>
+
+        </form>
+    </div><!--#searchbar-->
+
+    <a id="top"></a>
+
+    <div id="wrapper">
+        <main id="main">
+            <aside id="showcase-sidebar"
+                   class="sidebar lsidebar ">
+                <a class="jsAnchor sidebar-toggle"><i class="fa"></i></a>
+                <div class="sidebar-background">
+                    <div class="sidebar-content">
+                        <ul class="sidebare-section color-palette"><li class="color" style="background-color:#996633"><a class="dummy jsAnchor"></a></li><li class="color" style="background-color:#cccc33"><a class="dummy jsAnchor"></a></li><li class="color" style="background-color:#cc6633"><a class="dummy jsAnchor"></a></li><li class="color" style="background-color:#e7d8b1"><a class="dummy jsAnchor"></a></li><li class="color" style="background-color:#663300"><a class="dummy jsAnchor"></a></li></ul>
+                        <div class="sidebar-section">
+                            <a class="sidebar-section-toggle"><i class="fa fa-fw"></i></a>
+                            <h2>Tags</h2>
+
+
+                            <ul id="tags">
+                                <li class="tag tag-sfw"
+                                    id="tag-1954"
+                                    data-tag-id="1954"><a class="tagname" rel="tag" href="../tag/1954.html">ladybugs</a></li>
+                                <li class="tag tag-sfw"
+                                    id="tag-254"
+                                    data-tag-id="254"><a class="tagname" rel="tag" href="../tag/254.html">blurred</a></li>
+                                <li class="tag tag-sfw"
+                                    id="tag-119"
+                                    data-tag-id="119"><a class="tagname" rel="tag" href="../tag/119.html">depth of field</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-section">
+                            <a class="sidebar-section-toggle"><i class="fa fa-fw"></i></a>
+                            <h2>Purity </h2>
+                            <form method="POST" action="http://alpha.wallhaven.cc/wallpaper/purity" accept-charset="UTF-8" id="wallpaper-purity-form">
+                                <input name="_token" type="hidden" value="G6zflawD6nkbC4d6y3nq3k8sIiGz0WlM3QFZVlds">
+                                <fieldset class="framed">
+                                    <input id="sfw" checked="checked" name="purity" type="radio" value="sfw">
+                                    <label class="purity sfw" for="sfw">SFW</label>
+
+                                    <input id="sketchy" name="purity" type="radio" value="sketchy">
+                                    <label class="purity sketchy" for="sketchy">Sketchy</label>
+
+                                    <input id="nsfw" name="purity" type="radio" value="nsfw">
+                                    <label class="purity nsfw" for="nsfw">NSFW</label>
+                                </fieldset>
+                            </form>
+
+                        </div>
+
+
+                        <div class="sidebar-section">
+                            <a class="sidebar-section-toggle"><i class="fa fa-fw"></i></a>
+                            <h2>Properties</h2>
+
+                            <dl id="wallpaper-info">
+                                <dt>Resolution</dt>
+                                <dd>
+                                    2560 x 1600
+                                </dd>
+                                <dt>Size</dt>
+                                <dd>3.2 MiB</dd>
+                                <dt>Category</dt>
+                                <dd>
+                                    General
+                                </dd>
+                                <dt>Views</dt>
+                                <dd>6,929</dd>
+                                <dt>Favorites</dt>
+                                <dd>
+                                    <a class="overlay-anchor"
+                                       title="User Favorites"
+                                       href="78372.html">24</a>
+                                </dd>
+                                <dt>Uploaded by</dt>
+                                <dd><a class="username usergroup-2" href="../user/ErsiNOzkuL.html">ErsiNOzkuL</a></dd>
+                                <dt>Added</dt>
+                                <dd>
+                                    <time title="Sat, Oct 25, 2014 7:33 PM" datetime="2014-10-25T19:33:33+00:00">
+                                        3 weeks ago
+                                    </time>
+                                </dd>
+                                <dt>Source</dt>
+                                <dd class="source-url">
+                                    <a class="link" href="flower.html">
+                                        flower
+                                    </a>
+                                </dd>
+                            </dl>
+                        </div>
+
+
+
+
+
+
+                    </div>
+                </div>
+            </aside>
+
+
+            <section id="showcase-section">
+                <div id="showcase">
+                    <img id="wallpaper"
+                         src="@Model.Src"
+                         alt=""
+                         draggable="false"
+                         data-wallpaper-id="78372"
+                         data-wallpaper-width="2560"
+                         data-wallpaper-height="1600" />
+                </div>
+            </section>
+
+        </main>
+
+        <footer id="footer">
+            <a class="to-top" href="#top" title="Back to top"><i class="fa fa-lg fa-chevron-up"></i></a><p class="copyright">
+                <a href="../about.html#Copyright">All images remain property of their original owners.</a>
+                Site &amp; code &copy; <a href="../index.html">wallhaven.cc</a> 2014.
+            </p><p class="social">
+                <a title="Facebook" href="http://facebook.com/wallhavencc" target="_blank"><i class="fa fa-lg fa-facebook"></i></a><a title="Google+" href="https://google.com/+WallhavenCcc" target="_blank"><i class="fa fa-lg fa-google-plus"></i></a><a title="Twitter" href="http://twitter.com/wallhaven" target="_blank"><i class="fa fa-lg fa-twitter"></i></a><a class="irc" title="IRC" target="_blank"
+                                                                                                                                                                                                                                                                                                                                                                          href="https://qchat.rizon.net/?channels=#wallhaven"><!-- <i class="icon irc"></i> --><i class="fa fa-lg fa-comments"></i><span class="channel">#wallhaven</span><span class="server">irc.rizon.net</span></a><a class="irc-direct" title="IRC Direct"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          href="irc://irc.rizon.net/wallhaven"><i class="fa fa-slack"></i><i class="fa fa-exclamation"></i></a>
+            </p><nav class="footermenu"><a href="../auth/login.html">upload</a><a href="../latest.html">latest</a><a href="../tags.html">tags</a><a href="../comments.html">comments</a><a href="../about.html">about</a><a href="../faq.html">faq</a><a href="../rules.html">rules</a><a href="../team.html">team</a><a href="../contact.html">contact</a></nav>
+        </footer>
+    </div>
+
+    <span class="ribbon ribbon-bottom-right ribbon-red">Alpha</span>
+    <div id="overlay" class="overlay-hidden">
+        <section class="overlay-inner">
+            <header>
+                <h1>Message</h1>
+                <a class="jsAnchor overlay-close" id="overlay-close" title="Close">
+                    <i class="fa fa-times"></i>
+                </a>
+            </header>
+            <div class="overlay-content">
+            </div>
+        </section>
+    </div>
+
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <script src="//code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+
+    <script src="//static.wallhaven.cc/assets/dist/build.min.js"></script>
+
+
+
+
+    <script>
+/*<![CDATA[*/
+        new Collapsible($('#searchbar'), $('#searchbar-toggle'));
+        // Search
+        new Collapsible(
+                $('#search-resolutions').find('.dropdown'),
+                $('#search-resolutions').find('.dropdown-toggle'),
+                true
+        );
+
+        new Collapsible(
+                $('#search-ratios').find('.dropdown'),
+                $('#search-ratios').find('.dropdown-toggle'),
+                true
+        );
+        // hide notifications after 5 seconds and on click
+        window.setTimeout(
+                function () {
+                    $('#notifications').fadeOut();
+                },
+                5000
+        );
+        $('#notifications').one('click', function () {
+            $(this).fadeOut();
+        });
+
+
+
+
+        // purity settings
+        $('#wallpaper-purity-form input:radio').on('change', function (evt) {
+            evt.preventDefault();
+
+            $.post($('#wallpaper-purity-form').attr('action'), {
+                wallpaper_id: $('#wallpaper').data('wallpaper-id'),
+                purity: $('#wallpaper-purity-form input:radio[name=purity]:checked').val()
+            }).done(function (reply) {
+                if (!reply.status) {
+                    wh.overlay.error('Something went wrong');
+                }
+            });
+        });
+
+        /*]]>*/</script>
+</body>
+
+<!-- Mirrored from alpha.wallhaven.cc/wallpaper/78372 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Nov 2014 20:59:22 GMT -->
+</html>

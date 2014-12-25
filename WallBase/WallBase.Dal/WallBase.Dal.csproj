@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0CA03C37-1DBC-4439-BF82-7B2399CD6412}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WallBase.Dal</RootNamespace>
+    <AssemblyName>WallBase.Dal</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\Aspects\RepositoryActionBaseAttribute.cs" />
+    <Compile Include="Repository\Aspects\RepositoryActionContext.cs" />
+    <Compile Include="Repository\Aspects\RepositoryGetContext.cs" />
+    <Compile Include="Repository\Aspects\RepositoryQueryContext.cs" />
+    <Compile Include="Repository\Aspects\RepositoryQueryMultipleContext.cs" />
+    <Compile Include="Repository\Aspects\RepositoryQueryOneContext.cs" />
+    <Compile Include="Repository\Caching\Cache.cs" />
+    <Compile Include="Repository\Caching\CachingStrategyBase.cs" />
+    <Compile Include="Repository\Caching\CompoundKeyCachingStrategyBase.cs" />
+    <Compile Include="Repository\Caching\CompoundKeyCachingStrategyCommon.cs" />
+    <Compile Include="Repository\Caching\Hash\Evaluator.cs" />
+    <Compile Include="Repository\Caching\Hash\HashGenerator.cs" />
+    <Compile Include="Repository\Caching\Hash\LocalCollectionExpander.cs" />
+    <Compile Include="Repository\Caching\Hash\Utility.cs" />
+    <Compile Include="Repository\Caching\ICachePrefixManager.cs" />
+    <Compile Include="Repository\Caching\ICachingProvider.cs" />
+    <Compile Include="Repository\Caching\ICachingStrategy.cs" />
+    <Compile Include="Repository\Caching\ICompoundKeyCachingStrategy.cs" />
+    <Compile Include="Repository\Caching\InMemoryCachingProvider.cs" />
+    <Compile Include="Repository\Caching\InMemoryCachingProviderConfiguration.cs" />
+    <Compile Include="Repository\Caching\InMemoryConfigCachingProviderFactory.cs" />
+    <Compile Include="Repository\Caching\MultiServerCachePrefixManager.cs" />
+    <Compile Include="Repository\Caching\NoCachingConfigCachingStrategyFactory.cs" />
+    <Compile Include="Repository\Caching\NoCachingProvider.cs" />
+    <Compile Include="Repository\Caching\NoCachingStrategy.cs" />
+    <Compile Include="Repository\Caching\NoCachingStrategyBase.cs" />
+    <Compile Include="Repository\Caching\NoCachingStrategyConfiguration.cs" />
+    <Compile Include="Repository\Caching\NoCompoundKeyCachingStrategy.cs" />
+    <Compile Include="Repository\Caching\NoCompoundKeyCachingStrategyBase.cs" />
+    <Compile Include="Repository\Caching\SingleServerCachePrefixManager.cs" />
+    <Compile Include="Repository\Caching\StandardCachingStrategy.cs" />
+    <Compile Include="Repository\Caching\StandardCachingStrategyBase.cs" />
+    <Compile Include="Repository\Caching\StandardCachingStrategyConfiguration.cs" />
+    <Compile Include="Repository\Caching\StandardCachingStrategyWithPartition.cs" />
+    <Compile Include="Repository\Caching\StandardCompoundKeyCachingStrategy.cs" />
+    <Compile Include="Repository\Caching\StandardCompoundKeyCachingStrategyBase.cs" />
+    <Compile Include="Repository\Caching\StandardConfigCachingStrategyFactory.cs" />
+    <Compile Include="Repository\Caching\TimeoutCachingStrategy.cs" />
+    <Compile Include="Repository\Caching\TimeoutCachingStrategyBase.cs" />
+    <Compile Include="Repository\Caching\TimeoutCachingStrategyConfiguration.cs" />
+    <Compile Include="Repository\Caching\TimeoutCompoundKeyCachingStrategy.cs" />
+    <Compile Include="Repository\Caching\TimeoutCompoundKeyCachingStrategyBase.cs" />
+    <Compile Include="Repository\Caching\TimeoutConfigCachingStrategyFactory.cs" />
+    <Compile Include="Repository\CompositeRepository.cs" />
+    <Compile Include="Repository\CompoundKeyRepositoryBase.Batch.cs" />
+    <Compile Include="Repository\CompoundKeyRepositoryBase.BatchItem.cs" />
+    <Compile Include="Repository\CompoundKeyRepositoryBase.cs" />
+    <Compile Include="Repository\ConfigurationBasedRepository.cs" />
+    <Compile Include="Repository\Configuration\CachingProviderCollection.cs" />
+    <Compile Include="Repository\Configuration\CachingProviderConfiguration.cs" />
+    <Compile Include="Repository\Configuration\CachingProviderElement.cs" />
+    <Compile Include="Repository\Configuration\CachingStrategyCollection.cs" />
+    <Compile Include="Repository\Configuration\CachingStrategyConfiguration.cs" />
+    <Compile Include="Repository\Configuration\CachingStrategyElement.cs" />
+    <Compile Include="Repository\Configuration\ConfigCachingProviderFactory.cs" />
+    <Compile Include="Repository\Configuration\ConfigCachingStrategyFactory.cs" />
+    <Compile Include="Repository\Configuration\ConfigRepositoryFactory.cs" />
+    <Compile Include="Repository\Configuration\ConfigurationHelper.cs" />
+    <Compile Include="Repository\Configuration\FastActivator.cs" />
+    <Compile Include="Repository\Configuration\ICachingProviderConfiguration.cs" />
+    <Compile Include="Repository\Configuration\ICachingStrategyConfiguration.cs" />
+    <Compile Include="Repository\Configuration\IRepositoryConfiguration.cs" />
+    <Compile Include="Repository\Configuration\ISharpRepositoryConfiguration.cs" />
+    <Compile Include="Repository\Configuration\RepositoriesCollection.cs" />
+    <Compile Include="Repository\Configuration\RepositoriesSectionGroup.cs" />
+    <Compile Include="Repository\Configuration\RepositoryConfiguration.cs" />
+    <Compile Include="Repository\Configuration\RepositoryElement.cs" />
+    <Compile Include="Repository\Configuration\SharpRepositoryConfiguration.cs" />
+    <Compile Include="Repository\Configuration\SharpRepositoryConfigurationAttribute.cs" />
+    <Compile Include="Repository\Configuration\SharpRepositorySection.cs" />
+    <Compile Include="Repository\DefaultRepositoryConventions.cs" />
+    <Compile Include="Repository\DisabledCache.cs" />
+    <Compile Include="Repository\FetchStrategies\AbstractFetchStrategy.cs" />
+    <Compile Include="Repository\FetchStrategies\FetchStrategyExtensions.cs" />
+    <Compile Include="Repository\FetchStrategies\GenericFetchStrategy.cs" />
+    <Compile Include="Repository\FetchStrategies\IFetchStrategy.cs" />
+    <Compile Include="Repository\Helpers\CustomAttributeExtensions.cs" />
+    <Compile Include="Repository\Helpers\ExpressionHelper.cs" />
+    <Compile Include="Repository\Helpers\InternalCache.cs" />
+    <Compile Include="Repository\Helpers\Md5Helper.cs" />
+    <Compile Include="Repository\IAmInRepository.cs" />
+    <Compile Include="Repository\ICompoundKeyRepository.cs" />
+    <Compile Include="Repository\ICrudRepository.cs" />
+    <Compile Include="Repository\IDisabledCache.cs" />
+    <Compile Include="Repository\Ioc\BaseRepositoryDependencyResolver.cs" />
+    <Compile Include="Repository\Ioc\IocFactory.cs" />
+    <Compile Include="Repository\Ioc\IRepositoryDependencyResolver.cs" />
+    <Compile Include="Repository\Ioc\IRepositoryIocContainer.cs" />
+    <Compile Include="Repository\Ioc\RepositoryDependencyResolver.cs" />
+    <Compile Include="Repository\Ioc\RepositoryDependencyResolverException.cs" />
+    <Compile Include="Repository\Ioc\RepositoryIocContainer.cs" />
+    <Compile Include="Repository\Ioc\SharpRepositoryIocContainer.cs" />
+    <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\IRepositoryAggregates.cs" />
+    <Compile Include="Repository\IRepositoryBase.cs" />
+    <Compile Include="Repository\IRepositoryConventions.cs" />
+    <Compile Include="Repository\IRepositoryQueryable.cs" />
+    <Compile Include="Repository\LinqCompoundKeyRepositoryBase.cs" />
+    <Compile Include="Repository\LinqRepositoryBase.cs" />
+    <Compile Include="Repository\Linq\LinqHelpers.cs" />
+    <Compile Include="Repository\Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\Queries\CompoundKeyQueryManager.cs" />
+    <Compile Include="Repository\Queries\IPagingOptions.cs" />
+    <Compile Include="Repository\Queries\IQueryOptions.cs" />
+    <Compile Include="Repository\Queries\PagingOptions.cs" />
+    <Compile Include="Repository\Queries\QueryManager.Aggregates.cs" />
+    <Compile Include="Repository\Queries\QueryManager.cs" />
+    <Compile Include="Repository\Queries\SortingOptions.cs" />
+    <Compile Include="Repository\RepositoryBase.Batch.cs" />
+    <Compile Include="Repository\RepositoryBase.BatchItem.cs" />
+    <Compile Include="Repository\RepositoryBase.cs" />
+    <Compile Include="Repository\RepositoryConventions.cs" />
+    <Compile Include="Repository\RepositoryFactory.cs" />
+    <Compile Include="Repository\RepositoryPrimaryKeyAttribute.cs" />
+    <Compile Include="Repository\Specifications\AndAlsoSpecification.cs" />
+    <Compile Include="Repository\Specifications\AndNotSpecification.cs" />
+    <Compile Include="Repository\Specifications\AndSpecification.cs" />
+    <Compile Include="Repository\Specifications\CompositeSpecification.cs" />
+    <Compile Include="Repository\Specifications\ExpressionExtensions.cs" />
+    <Compile Include="Repository\Specifications\ISpecification.cs" />
+    <Compile Include="Repository\Specifications\NotSpecification.cs" />
+    <Compile Include="Repository\Specifications\OrElseSpecification.cs" />
+    <Compile Include="Repository\Specifications\OrNotSpecification.cs" />
+    <Compile Include="Repository\Specifications\OrSpecification.cs" />
+    <Compile Include="Repository\Specifications\Specification.cs" />
+    <Compile Include="Repository\Traits\ICanAdd.cs" />
+    <Compile Include="Repository\Traits\ICanBatch.cs" />
+    <Compile Include="Repository\Traits\ICanDelete.cs" />
+    <Compile Include="Repository\Traits\ICanFind.cs" />
+    <Compile Include="Repository\Traits\ICanGet.cs" />
+    <Compile Include="Repository\Traits\ICanUpdate.cs" />
+    <Compile Include="Repository\Transactions\BatchAction.cs" />
+    <Compile Include="Repository\Transactions\IBatch.cs" />
+    <Compile Include="Repository\Transactions\IBatchItem.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

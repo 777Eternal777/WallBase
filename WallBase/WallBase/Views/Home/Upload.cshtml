@@ -1,0 +1,541 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="http://alpha.wallhaven.cc/favicon.ico" />
+
+    <title>Wallpaper Upload - wallhaven.cc</title>
+    <meta name="title" content="Wallpaper Upload">
+    <meta name="description"
+          content="Share your favorite wallpapers with the world!">
+
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="wallhaven.cc wallpaper search" href="http://alpha.wallhaven.cc/openSearch/wallpapers" />
+
+    <link media="all" type="text/css" rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    <link media="all" type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,700">
+
+    <link media="all" type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,700">
+
+    <link media="all" type="text/css" rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+
+
+    <link media="all" type="text/css" rel="stylesheet" href="//static.wallhaven.cc/assets/dist/build.min.css">
+
+
+
+    <script src="//static.wallhaven.cc/assets/dev/dropzone.js"></script>
+
+
+    <script id="template-dropzone-thumb" type="text/html">
+        <li class="thumb dz-preview">
+            <img data-dz-thumbnail>
+            <div class="errormsg" data-dz-errormessage></div>
+            <div class="progress"><div data-dz-uploadprogress></div></div>
+            <i class="success-icon fa fa-check"></i>
+            <a data-dz-remove class="jsAnchor rm" title="Remove"><i class="fa fa-trash-o"></i></a>
+            <div class="wall-info">
+                <span class="wall-res"></span>
+            </div>
+            <div class="file-info">
+                <span class="filename" data-dz-name></span>
+                <span class="filesize" data-dz-size></span>
+            </div>
+        </li>
+    </script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-1164114-11', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+<body class="base">
+
+    <header id="header">
+        <nav>
+            <h1>
+                <a href="http://alpha.wallhaven.cc">
+                    <img src="//static.wallhaven.cc/images/layout/logo_sm.png" alt="wallhaven">
+                    <span>Wallhaven</span>
+                </a>
+            </h1>
+
+            <div id="userpanel" class="logged-in">
+                <span id="welcome">
+                    <span class="welcome-text">Welcome back,</span>
+                    <a title="Profile"
+                       href="http://alpha.wallhaven.cc/user/777Immortal777">
+
+                        <span class="username usergroup-2">777Immortal777</span>
+
+                        <span class="avatar-sm">
+                            <img src="//static.wallhaven.cc/images/user/default-avatar.jpg" alt="">
+                        </span>
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                </span>
+                <ul id="usermenu">
+                    <li>
+                        <a class="favs" href="http://alpha.wallhaven.cc/favorites">
+                            <i class="fa fa-star fa-lg fa-fw"></i>
+                            <span>Favorites</span>
+                            <small>0</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="subscriptions" href="http://alpha.wallhaven.cc/subscription">
+                            <i class="fa fa-inbox fa-lg fa-fw"></i>
+                            <span>Subscriptions</span>
+                            <small>0</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="uploads" href="http://alpha.wallhaven.cc/user/777Immortal777/uploads">
+                            <i class="fa fa-upload fa-lg fa-fw"></i>
+                            <span>Uploads</span>
+                            <small>1</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="messages" href="http://alpha.wallhaven.cc/messages">
+                            <i class="fa fa-envelope fa-lg fa-fw"></i>
+                            <span>Messages</span>
+                            <small>0</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="settings" href="http://alpha.wallhaven.cc/settings">
+                            <i class="fa fa-cog fa-lg fa-fw"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="logout" href="http://alpha.wallhaven.cc/auth/logout">
+                            <i class="fa fa-power-off fa-lg fa-fw"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <ul id="topmenu">             <li><a class="latest" href="http://alpha.wallhaven.cc/latest"><i class="fa fa-lg fa-clock-o"></i><span>Latest</span></a></li><li><a class="random" href="http://alpha.wallhaven.cc/random"><i class="fa fa-lg fa-random"></i><span>Random</span></a></li><li><a class="upload" href="http://alpha.wallhaven.cc/upload"><i class="fa fa-lg fa-upload"></i><span>Upload</span></a></li><li><a class="comments" href="http://alpha.wallhaven.cc/comments"><i class="fa fa-lg fa-comments-o "></i><span>Comments</span></a></li><li><a class="search jsAnchor" id="searchbar-toggle"><i class="fa fa-lg fa-search"></i><span>Search</span></a></li>        </ul>
+        </nav>
+    </header>
+
+
+
+
+
+
+
+    <div id="searchbar" class="collapsed">
+        <form method="GET" action="http://alpha.wallhaven.cc/search" accept-charset="UTF-8" id="search">
+
+            <fieldset class="oneline">
+                <div>
+                    <input type="search" id="search-text" name="q"
+                           placeholder="Search..." value="" />
+                </div>
+                <button class="icon-button"><i class="fa fa-search"></i></button>
+            </fieldset>
+
+            <fieldset id="search-category-checks">
+                <input id="search-general" checked="checked" name="general" type="checkbox" value="general">
+                <label for="search-general">General</label>
+
+
+                <input id="search-anime" checked="checked" name="anime" type="checkbox" value="anime">
+                <label for="search-anime">Anime</label>
+
+                <input id="search-people" checked="checked" name="people" type="checkbox" value="people">
+                <label for="search-people">People</label>
+            </fieldset>
+
+            <fieldset id="search-purity-checks">
+                <input id="search-sfw" checked="checked" name="sfw" type="checkbox" value="sfw">
+                <label class="purity sfw" for="search-sfw">SFW</label>
+
+                <input id="search-sketchy" checked="checked" name="sketchy" type="checkbox" value="sketchy">
+                <label class="purity sketchy" for="search-sketchy">Sketchy</label>
+
+                <input id="search-nsfw" name="nsfw" type="checkbox" value="nsfw">
+                <label class="purity nsfw" for="search-nsfw">NSFW</label>
+            </fieldset>
+
+            <fieldset id="search-resolutions">
+                <a class="jsAnchor dropdown-toggle collapsed">Resolution</a>
+                <div class="dropdown collapsed">
+                    <div>
+                        <input id="res-1024x768" class="resolution" name="resolution" type="checkbox" value="1024x768">
+                        <label style="display: block" for="res-1024x768">
+                            1024x768
+                        </label>
+                        <input id="res-1280x800" class="resolution" name="resolution" type="checkbox" value="1280x800">
+                        <label style="display: block" for="res-1280x800">
+                            1280x800
+                        </label>
+                        <input id="res-1366x768" class="resolution" name="resolution" type="checkbox" value="1366x768">
+                        <label style="display: block" for="res-1366x768">
+                            1366x768
+                        </label>
+                        <input id="res-1280x960" class="resolution" name="resolution" type="checkbox" value="1280x960">
+                        <label style="display: block" for="res-1280x960">
+                            1280x960
+                        </label>
+                        <input id="res-1440x900" class="resolution" name="resolution" type="checkbox" value="1440x900">
+                        <label style="display: block" for="res-1440x900">
+                            1440x900
+                        </label>
+                        <input id="res-1600x900" class="resolution" name="resolution" type="checkbox" value="1600x900">
+                        <label style="display: block" for="res-1600x900">
+                            1600x900
+                        </label>
+                        <input id="res-1280x1024" class="resolution" name="resolution" type="checkbox" value="1280x1024">
+                        <label style="display: block" for="res-1280x1024">
+                            1280x1024
+                        </label>
+                        <input id="res-1600x1200" class="resolution" name="resolution" type="checkbox" value="1600x1200">
+                        <label style="display: block" for="res-1600x1200">
+                            1600x1200
+                        </label>
+                        <input id="res-1680x1050" class="resolution" name="resolution" type="checkbox" value="1680x1050">
+                        <label style="display: block" for="res-1680x1050">
+                            1680x1050
+                        </label>
+                        <input id="res-1920x1080" class="resolution" name="resolution" type="checkbox" value="1920x1080">
+                        <label style="display: block" for="res-1920x1080">
+                            1920x1080
+                            <small>Full HD</small>
+                        </label>
+                        <input id="res-1920x1200" class="resolution" name="resolution" type="checkbox" value="1920x1200">
+                        <label style="display: block" for="res-1920x1200">
+                            1920x1200
+                        </label>
+                        <input id="res-2560x1440" class="resolution" name="resolution" type="checkbox" value="2560x1440">
+                        <label style="display: block" for="res-2560x1440">
+                            2560x1440
+                        </label>
+                        <input id="res-2560x1600" class="resolution" name="resolution" type="checkbox" value="2560x1600">
+                        <label style="display: block" for="res-2560x1600">
+                            2560x1600
+                        </label>
+                        <input id="res-3840x1080" class="resolution" name="resolution" type="checkbox" value="3840x1080">
+                        <label style="display: block" for="res-3840x1080">
+                            3840x1080
+                        </label>
+                        <input id="res-5760x1080" class="resolution" name="resolution" type="checkbox" value="5760x1080">
+                        <label style="display: block" for="res-5760x1080">
+                            5760x1080
+                        </label>
+                        <input id="res-3840x2160" class="resolution" name="resolution" type="checkbox" value="3840x2160">
+                        <label style="display: block" for="res-3840x2160">
+                            3840x2160
+                            <small>4k UHD-1</small>
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset id="search-ratios">
+                <a class="jsAnchor dropdown-toggle collapsed">Ratio</a>
+                <div class="dropdown collapsed">
+                    <div>
+                        <input id="ratio-4x3" class="ratio" name="ratio" type="checkbox" value="4x3">
+                        <label style="display: block" for="ratio-4x3">
+                            4x3
+                        </label>
+                        <input id="ratio-5x4" class="ratio" name="ratio" type="checkbox" value="5x4">
+                        <label style="display: block" for="ratio-5x4">
+                            5x4
+                        </label>
+                        <input id="ratio-16x9" class="ratio" name="ratio" type="checkbox" value="16x9">
+                        <label style="display: block" for="ratio-16x9">
+                            16x9
+                        </label>
+                        <input id="ratio-16x10" class="ratio" name="ratio" type="checkbox" value="16x10">
+                        <label style="display: block" for="ratio-16x10">
+                            16x10
+                        </label>
+                        <input id="ratio-32x9" class="ratio" name="ratio" type="checkbox" value="32x9">
+                        <label style="display: block" for="ratio-32x9">
+                            32x9
+                        </label>
+                        <input id="ratio-48x9" class="ratio" name="ratio" type="checkbox" value="48x9">
+                        <label style="display: block" for="ratio-48x9">
+                            48x9
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="oneline">
+                <div>
+                    <select id="search-sorting" title="Sorting">
+                        <option value="relevance" selected="selected">
+                            Relevance
+                        </option>
+                        <option value="random">
+                            Random
+                        </option>
+                        <option value="date_added">
+                            Date Added
+                        </option>
+                        <option value="views">
+                            Views
+                        </option>
+                        <option value="favorites">
+                            Favorites
+                        </option>
+                    </select>
+                </div>
+
+                <input id="search-order" checked="checked" name="order" type="checkbox" value="desc">
+                <label class="icon-button" for="search-order"></label>
+            </fieldset>
+
+            <button class="button" id="search-submit"><i class="fa fa-refresh fa-fw"></i></button>
+
+        </form>
+    </div><!--#searchbar-->
+
+    <a id="top"></a>
+
+    <div id="wrapper">
+        <main id="main">
+
+
+            <form method="POST" action="@Url.Action("UploadImageMethod", "Wallpapers")" accept-charset="UTF-8" class="content-container blockform dropzone" id="upload" enctype="multipart/form-data">
+                <input name="_token" type="hidden" value="c1QMBcxX01SPmR3b7vxgCze0S46NjkWfCp36D66I">
+                <img src="//static.wallhaven.cc/images/layout/logo.png">
+
+                <h1>Multi Wallpaper Upload <em>testing</em></h1>
+
+                <p style="margin:1em auto;text-align:left;display:inline-block">
+                    <h3 style="display:inline">Alpha Notice:</h3>
+                    We are expecting to start fresh at the end of the alpha phase.<br />
+                    Uploads and user accounts will be <strong style="color: #aa3959">deleted</strong> at the end of the alpha.
+                </p>
+
+                <fieldset>
+                    <legend>Files</legend>
+                    <section id="files">
+                        <div id="dropzone-dummy">
+                            <header>
+                                <h3>Drop files here</h3><span class="or">or</span>
+                                <a class="button"><i class="fa fa-folder-open"></i> Select files</a>
+                            </header>
+                            <ul id="dropzone-previews"></ul>
+                            <i class="fa fa-4x fa-file-image-o"></i>
+                        </div>
+                        <footer>
+                            <a id="clear" class="button jsAnchor"><i class="fa fa-trash-o"></i> Clear</a>
+                            <button id="start-upload"
+                                    class="button upload-submit"
+                                    type="submit"
+                                    style="display:none">
+                                <i class="fa fa-upload"></i> Upload
+                            </button>
+                            <a class="button dead"><i class="fa fa-upload"></i> Upload</a>
+                        </footer>
+                    </section>
+                </fieldset>
+
+                <p>
+                    Please review our <a href="http://alpha.wallhaven.cc/rules#Uploading" style="color: #0CD" target="_blank">uploading rules</a> before continuing!
+                </p>
+                <a id="upload-done" class="button jsAnchor"><i class="fa fa-check"></i> Done!</a>
+                <a class="button dead"><i class="fa fa-check"></i> Done!</a>
+
+            </form>
+
+
+        </main>
+
+        <footer id="footer">
+            <a class="to-top" href="#top" title="Back to top"><i class="fa fa-lg fa-chevron-up"></i></a><p class="copyright">
+                <a href="http://alpha.wallhaven.cc/about#Copyright">All images remain property of their original owners.</a>
+                Site &amp; code &copy; <a href="http://alpha.wallhaven.cc">wallhaven.cc</a> 2014.
+            </p><p class="social">
+                <a title="Facebook" href="http://facebook.com/wallhavencc" target="_blank"><i class="fa fa-lg fa-facebook"></i></a><a title="Google+" href="https://google.com/+WallhavenCcc" target="_blank"><i class="fa fa-lg fa-google-plus"></i></a><a title="Twitter" href="http://twitter.com/wallhaven" target="_blank"><i class="fa fa-lg fa-twitter"></i></a><a class="irc" title="IRC" target="_blank"
+                                                                                                                                                                                                                                                                                                                                                                          href="https://qchat.rizon.net/?channels=#wallhaven&amp;nick=777Immortal777"><!-- <i class="icon irc"></i> --><i class="fa fa-lg fa-comments"></i><span class="channel">#wallhaven</span><span class="server">irc.rizon.net</span></a><a class="irc-direct" title="IRC Direct"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  href="irc://irc.rizon.net/wallhaven"><i class="fa fa-slack"></i><i class="fa fa-exclamation"></i></a>
+            </p><nav class="footermenu"><a href="http://alpha.wallhaven.cc/upload">upload</a><a href="http://alpha.wallhaven.cc/latest">latest</a><a href="http://alpha.wallhaven.cc/tags">tags</a><a href="http://alpha.wallhaven.cc/comments">comments</a><a href="http://alpha.wallhaven.cc/about">about</a><a href="http://alpha.wallhaven.cc/faq">faq</a><a href="http://alpha.wallhaven.cc/rules">rules</a><a href="http://alpha.wallhaven.cc/team">team</a><a href="http://alpha.wallhaven.cc/contact">contact</a></nav>
+        </footer>
+    </div>
+
+    <span class="ribbon ribbon-bottom-right ribbon-red">Alpha</span>
+    <div id="overlay" class="overlay-hidden">
+        <section class="overlay-inner">
+            <header>
+                <h1>Message</h1>
+                <a class="jsAnchor overlay-close" id="overlay-close" title="Close">
+                    <i class="fa fa-times"></i>
+                </a>
+            </header>
+            <div class="overlay-content">
+            </div>
+        </section>
+    </div>
+
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <script src="//code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+
+    <script src="//static.wallhaven.cc/assets/dist/build.min.js"></script>
+
+
+
+
+    <script>
+/*<![CDATA[*/
+        new Collapsible($('#searchbar'), $('#searchbar-toggle'));
+        // Search
+        new Collapsible(
+                $('#search-resolutions').find('.dropdown'),
+                $('#search-resolutions').find('.dropdown-toggle'),
+                true
+        );
+
+        new Collapsible(
+                $('#search-ratios').find('.dropdown'),
+                $('#search-ratios').find('.dropdown-toggle'),
+                true
+        );
+        // hide notifications after 5 seconds and on click
+        window.setTimeout(
+                function () {
+                    $('#notifications').fadeOut();
+                },
+                5000
+        );
+        $('#notifications').one('click', function () {
+            $(this).fadeOut();
+        });
+
+
+
+        // "upload" = css ID of form#upload.dropzone
+        Dropzone.options.upload = {
+
+            // configuration
+            maxFiles: 20,
+            acceptedFiles: "image/*",
+
+            // start upload automatically?
+            autoProcessQueue: false,
+
+            // multiple files in one request?
+            uploadMultiple: false,
+
+            // parallel requests
+            parallelUploads: 20,
+
+            // template stuff
+            clickable: "#dropzone-dummy",
+            previewsContainer: "#dropzone-previews",
+            previewTemplate: $("#template-dropzone-thumb").text(),
+            dictDefaultMessage: "",
+            thumbnailWidth: null,
+            thumbnailHeight: 200,
+            addRemoveLinks: false,
+
+            // The setting up of the dropzone
+            init: function () {
+                "use strict";
+
+                var thisDZ = this,
+                    clearBtn = $("#clear"),
+                    doneBtn = $("#upload-done").hide(),
+                    doneBtnDummy = $("#upload-done ~ .dead").show(),
+                    submitBtn = $("#start-upload").hide(),
+                    submitBtnDummy = $("#start-upload ~ .dead").show(),
+                    failed = [],
+                    successes = false;
+
+                // clear button removes all failed and unprocessed files
+                clearBtn.click(function () {
+                    thisDZ.getQueuedFiles().forEach(thisDZ.removeFile.bind(thisDZ));
+                    thisDZ.getRejectedFiles().forEach(thisDZ.removeFile.bind(thisDZ));
+                    failed.forEach(thisDZ.removeFile.bind(thisDZ));
+                    failed = [];
+                });
+
+                // done button redirects to next view
+                doneBtn.click(function () {
+                    document.location.reload(true);
+                });
+
+                // activate upload button when files were added
+                this.on("addedfile", function (file) {
+                    submitBtn.show();
+                    submitBtnDummy.hide();
+                });
+
+                // deactivate upload button when no files remain to be uploaded
+                this.on("removedfile", function (file) {
+                    if (!thisDZ.getQueuedFiles().length && !thisDZ.getRejectedFiles().length) {
+                        submitBtn.hide();
+                        submitBtnDummy.show();
+                    }
+                });
+
+                // don't let user add more the maxFiles files at once
+                this.on("maxfilesexceeded", function (file) {
+                    wh.overlay.error("You can only add " + thisDZ.options.maxFiles + " files at once.");
+                    thisDZ.removeFile(file);
+                });
+
+                // display wallpaper resolution on thumbnails
+                this.on("thumbnail", function (file) {
+                    $(".wall-res", file.previewElement)
+                        .text(file.width + " x " + file.height);
+                });
+
+                // form submit = start upload
+                $("#upload").submit(function (e) {
+                    e.preventDefault();
+
+                    // update controlls
+                    submitBtn.hide();
+                    submitBtnDummy.show();
+
+                    // start uploading
+                    thisDZ.processQueue();
+                });
+
+                // keep track of failed uploads
+                this.on("error", function (file, msg, xhr) {
+                    if (xhr) failed.push(file);
+                });
+
+                // remove delete button on successfully uploaded files
+                this.on("success", function (file) {
+                    successes = true;
+                    $(".rm", file.previewElement).remove();
+                });
+
+                // Gets triggered when all files have been sent.
+                // Redirect user or notify of success.
+                this.on("queuecomplete", function () {
+                    // active done button when files were successfully uploaded
+                    if (successes) {
+                        doneBtnDummy.hide();
+                        doneBtn.show();
+                    }
+                });
+            },
+        }
+        /*]]>*/</script>
+</body>
+</html>
