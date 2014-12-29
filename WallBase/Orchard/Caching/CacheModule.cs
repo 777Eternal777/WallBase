@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Linq;
+using System.Reflection;
+
 using Autofac;
 
 namespace Orchard.Caching {
