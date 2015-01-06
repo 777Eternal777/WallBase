@@ -6,6 +6,7 @@
 *.user
 *.sln.docstates
 *.hgignore
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
@@ -17,9 +18,6 @@ build/
 bld/
 [Bb]in/
 [Oo]bj/
-WallBase/ConsoleApplication1/Umbarko/
-WallBase/Orchard/  
-WallBase/Orchard.Indexing/  
 # Roslyn cache directories
 *.ide/
 
@@ -223,6 +221,8 @@ Desktop.ini
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
+WallBase/ConsoleApplication1/Umbarko/
+WallBase/Orchard.Indexing/  
 
 # Windows Installer files
 *.cab
