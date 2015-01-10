@@ -32,6 +32,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,9 +43,7 @@
   <ItemGroup>
     <Compile Include="FileSystem\Common.cs" />
     <Compile Include="FileSystem\Directory.cs" />
-    <Compile Include="FileSystem\File.cs" />
     <Compile Include="FileSystem\FileStoreDb.cs" />
-    <Compile Include="FileSystem\FileSystemUtilities.cs" />
     <Compile Include="FileSystem\Image.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

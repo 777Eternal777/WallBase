@@ -62,7 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WallpapersManager.cs" />
+    <Compile Include="WallpapersService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WallBase.Caching.Redis\SharpRepository.Caching.Redis.csproj">
@@ -77,17 +77,13 @@
       <Project>{e52b3b50-143d-4f85-9e42-7434644ef07f}</Project>
       <Name>SharpRepository.EfRepository</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WallBase.Ioc.Ninject\SharpRepository.Ioc.Ninject.csproj">
-      <Project>{549f87cc-3b00-4b45-94c9-517422556f8a}</Project>
-      <Name>SharpRepository.Ioc.Ninject</Name>
-    </ProjectReference>
     <ProjectReference Include="..\WallBase.MongoDbRepository\SharpRepository.MongoDbRepository.csproj">
       <Project>{dc40febe-2e39-4cb8-ae11-dfe9f6865bd2}</Project>
       <Name>SharpRepository.MongoDbRepository</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WallBase.Repository\WallBase.Repository.csproj">
+    <ProjectReference Include="..\WallBase.Repository\SharpRepository.Repository.csproj">
       <Project>{710dee79-25ce-4f68-b8b1-d08a135ad154}</Project>
-      <Name>WallBase.Repository</Name>
+      <Name>SharpRepository.Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

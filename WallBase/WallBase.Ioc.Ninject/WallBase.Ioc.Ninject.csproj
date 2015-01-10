@@ -57,7 +57,7 @@
       <Project>{dc40febe-2e39-4cb8-ae11-dfe9f6865bd2}</Project>
       <Name>SharpRepository.MongoDbRepository</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WallBase.Repository\WallBase.Repository.csproj">
+    <ProjectReference Include="..\WallBase.Repository\SharpRepository.Repository.csproj">
       <Project>{710DEE79-25CE-4F68-B8B1-D08A135AD154}</Project>
       <Name>WallBase.Repository</Name>
     </ProjectReference>

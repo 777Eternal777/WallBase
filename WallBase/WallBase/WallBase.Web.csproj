@@ -197,6 +197,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Config\Directories.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\WallpapersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -316,9 +317,9 @@
       <Project>{168ee9d2-7828-4e8d-9489-4624fca7717c}</Project>
       <Name>WallBase.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WallBase.Ioc.Ninject\SharpRepository.Ioc.Ninject.csproj">
+    <ProjectReference Include="..\WallBase.Ioc.Ninject\WallBase.Ioc.Ninject.csproj">
       <Project>{549f87cc-3b00-4b45-94c9-517422556f8a}</Project>
-      <Name>SharpRepository.Ioc.Ninject</Name>
+      <Name>WallBase.Ioc.Ninject</Name>
     </ProjectReference>
     <ProjectReference Include="..\Wallbase.IoCSetup\Wallbase.IoCSetup.csproj">
       <Project>{1ec724eb-9416-47af-b4a2-ab372a659c62}</Project>
@@ -328,9 +329,9 @@
       <Project>{86a7ce9b-e4e4-4301-85d5-d70239ac7835}</Project>
       <Name>WallBase.Logic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WallBase.Repository\WallBase.Repository.csproj">
+    <ProjectReference Include="..\WallBase.Repository\SharpRepository.Repository.csproj">
       <Project>{710dee79-25ce-4f68-b8b1-d08a135ad154}</Project>
-      <Name>WallBase.Repository</Name>
+      <Name>SharpRepository.Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

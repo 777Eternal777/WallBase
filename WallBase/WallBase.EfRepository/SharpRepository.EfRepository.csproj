@@ -68,7 +68,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WallBase.Repository\WallBase.Repository.csproj">
+    <ProjectReference Include="..\WallBase.Repository\SharpRepository.Repository.csproj">
       <Project>{710DEE79-25CE-4F68-B8B1-D08A135AD154}</Project>
       <Name>SharpRepository.Repository</Name>
     </ProjectReference>

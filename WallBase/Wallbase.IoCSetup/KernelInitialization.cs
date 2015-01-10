@@ -24,7 +24,7 @@ namespace Wallbase.IoCSetup
             NinjectResolver.kernel.Bind<DbContext>().To<WallbaseDB>().InThreadScope();
             NinjectResolver.kernel.Bind<WallbaseDB>().To<WallbaseDB>().InThreadScope();
 
-            NinjectResolver.kernel.Bind<WallpapersManager>().To<WallpapersManager>().InThreadScope();
+            NinjectResolver.kernel.Bind<WallpapersService>().To<WallpapersService>().InThreadScope();
             NinjectResolver.kernel.BindSharpRepository(RepositoryConfiguration.GetConfig());
         }
     }

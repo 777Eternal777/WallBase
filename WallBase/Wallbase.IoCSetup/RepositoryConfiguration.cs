@@ -18,10 +18,10 @@ namespace Wallbase.IoCSetup
         {
             var config = new SharpRepositoryConfiguration();
             config.AddRepository(new EfRepositoryConfiguration("ef5", "DefaultConnection", typeof(WallbaseDB)));
-            config.AddCachingStrategy(new TimeoutCachingStrategyConfiguration("timeout", 30)); // Timeout strategy named timeout with 30 second cache time
-            config.AddCachingStrategy(new StandardCachingStrategyConfiguration("standard")); // Standar d strategy named standard
-            config.AddCachingStrategy(new NoCachingStrategyConfiguration("none")); // No caching named none
-            config.AddCachingProvider(new RedisCachingProviderConfiguration("inmemory", "127.0.0.1", 6379,"",false)); // InMemory provider name inmemory
+            config.AddCachingStrategy(new TimeoutCachingStrategyConfiguration("timeout", 30)); 
+            config.AddCachingStrategy(new StandardCachingStrategyConfiguration("standard")); 
+            config.AddCachingStrategy(new NoCachingStrategyConfiguration("none")); 
+            config.AddCachingProvider(new RedisCachingProviderConfiguration("inmemory", "127.0.0.1", 6379,"",false)); 
 
             config.DefaultRepository = "ef5";
             config.DefaultCachingStrategy = "timeout";

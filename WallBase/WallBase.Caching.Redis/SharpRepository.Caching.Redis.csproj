@@ -73,7 +73,7 @@
     <Compile Include="StackExchangeExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WallBase.Repository\WallBase.Repository.csproj">
+    <ProjectReference Include="..\WallBase.Repository\SharpRepository.Repository.csproj">
       <Project>{710dee79-25ce-4f68-b8b1-d08a135ad154}</Project>
       <Name>SharpRepository.Repository</Name>
     </ProjectReference>

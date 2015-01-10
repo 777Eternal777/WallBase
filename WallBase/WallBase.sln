@@ -9,13 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WallBase.Tests", "WallBase.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lucene", "Lucene\Lucene.csproj", "{D5D447D7-EF8E-43A6-B9A4-3B025DD9F45D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.Indexing", "Orchard.Indexing\Orchard.Indexing.csproj", "{EA2B9121-EF54-40A6-A53E-6593C86EE696}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.Framework", "Orchard\Orchard.Framework.csproj", "{2D1D92BB-4555-4CBE-8D0E-63563D6CE4C6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WallBase.Core", "WallBase.Core\WallBase.Core.csproj", "{168EE9D2-7828-4E8D-9489-4624FCA7717C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WallBase.Framework", "WallBase.Framework\WallBase.Framework.csproj", "{21E08A1D-B08F-44BB-9BF8-69DC25919EBC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WallBase.Extensions", "WallBase.Extensions\WallBase.Extensions.csproj", "{4FC931B3-91FC-46EA-892A-B54DA4EE3D1B}"
 EndProject
@@ -33,7 +27,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "umbraco.businesslogic", "um
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Umbarco", "Umbarco", "{D93CCB08-BC9E-4B70-B2F8-AD6FDB2F9057}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WallBase.Repository", "WallBase.Repository\WallBase.Repository.csproj", "{710DEE79-25CE-4F68-B8B1-D08A135AD154}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpRepository.Repository", "WallBase.Repository\SharpRepository.Repository.csproj", "{710DEE79-25CE-4F68-B8B1-D08A135AD154}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{2BDA72F9-0A05-45DA-8659-3D1EA0C67569}"
 EndProject
@@ -45,8 +39,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WallBase.Logic", "WallBase.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpRepository.EfRepository", "WallBase.EfRepository\SharpRepository.EfRepository.csproj", "{E52B3B50-143D-4F85-9E42-7434644EF07F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpRepository.Ioc.Ninject", "WallBase.Ioc.Ninject\SharpRepository.Ioc.Ninject.csproj", "{549F87CC-3B00-4B45-94C9-517422556F8A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wallbase.IoCSetup", "Wallbase.IoCSetup\Wallbase.IoCSetup.csproj", "{1EC724EB-9416-47AF-B4A2-AB372A659C62}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hangfire.Core", "Hangfire.Core\Hangfire.Core.csproj", "{C995EA9E-56EE-4951-8260-D94260A7F4C2}"
@@ -56,6 +48,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hangfire.SqlServer", "Hangfire.SqlServer\Hangfire.SqlServer.csproj", "{A523C0E3-097D-4869-977F-15A717EA3E83}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfContext", "EfContext\EfContext.csproj", "{6CDD3F26-8E48-44BD-82AE-66C100351262}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WallBase.Ioc.Ninject", "WallBase.Ioc.Ninject\WallBase.Ioc.Ninject.csproj", "{549F87CC-3B00-4B45-94C9-517422556F8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,22 +69,10 @@ Global
 		{D5D447D7-EF8E-43A6-B9A4-3B025DD9F45D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5D447D7-EF8E-43A6-B9A4-3B025DD9F45D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5D447D7-EF8E-43A6-B9A4-3B025DD9F45D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EA2B9121-EF54-40A6-A53E-6593C86EE696}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EA2B9121-EF54-40A6-A53E-6593C86EE696}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EA2B9121-EF54-40A6-A53E-6593C86EE696}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EA2B9121-EF54-40A6-A53E-6593C86EE696}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2D1D92BB-4555-4CBE-8D0E-63563D6CE4C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D1D92BB-4555-4CBE-8D0E-63563D6CE4C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D1D92BB-4555-4CBE-8D0E-63563D6CE4C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D1D92BB-4555-4CBE-8D0E-63563D6CE4C6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{168EE9D2-7828-4E8D-9489-4624FCA7717C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{168EE9D2-7828-4E8D-9489-4624FCA7717C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{168EE9D2-7828-4E8D-9489-4624FCA7717C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{168EE9D2-7828-4E8D-9489-4624FCA7717C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{21E08A1D-B08F-44BB-9BF8-69DC25919EBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{21E08A1D-B08F-44BB-9BF8-69DC25919EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{21E08A1D-B08F-44BB-9BF8-69DC25919EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{21E08A1D-B08F-44BB-9BF8-69DC25919EBC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4FC931B3-91FC-46EA-892A-B54DA4EE3D1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4FC931B3-91FC-46EA-892A-B54DA4EE3D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FC931B3-91FC-46EA-892A-B54DA4EE3D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -139,10 +121,6 @@ Global
 		{E52B3B50-143D-4F85-9E42-7434644EF07F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E52B3B50-143D-4F85-9E42-7434644EF07F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E52B3B50-143D-4F85-9E42-7434644EF07F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{549F87CC-3B00-4B45-94C9-517422556F8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{549F87CC-3B00-4B45-94C9-517422556F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{549F87CC-3B00-4B45-94C9-517422556F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{549F87CC-3B00-4B45-94C9-517422556F8A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1EC724EB-9416-47AF-B4A2-AB372A659C62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1EC724EB-9416-47AF-B4A2-AB372A659C62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EC724EB-9416-47AF-B4A2-AB372A659C62}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -163,6 +141,10 @@ Global
 		{6CDD3F26-8E48-44BD-82AE-66C100351262}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CDD3F26-8E48-44BD-82AE-66C100351262}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CDD3F26-8E48-44BD-82AE-66C100351262}.Release|Any CPU.Build.0 = Release|Any CPU
+		{549F87CC-3B00-4B45-94C9-517422556F8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{549F87CC-3B00-4B45-94C9-517422556F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{549F87CC-3B00-4B45-94C9-517422556F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{549F87CC-3B00-4B45-94C9-517422556F8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,16 +3,13 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace Umbraco.Core.Dynamics
+namespace WallBase.Extensions
 {
     /// <summary>
     /// Extension methods for IQueryable
     /// </summary>
     /// <remarks>
     /// NOTE: Ordering code taken from: http://stackoverflow.com/questions/41244/dynamic-linq-orderby-on-ienumerablet
-    /// 
-    /// ANOTHER NOTE: We have a bastardized version of Dynamic Linq existing at Umbraco.Web.Dynamics however it's been hacked so not
-    /// sure we can use it for anything other than DynamicNode.
     /// </remarks>
     internal static class QueryableExtensions
     {

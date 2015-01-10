@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using BlogEngine.Core.FileSystem;
 
 namespace WallBase.Framework.FileSystem
 {
@@ -11,7 +10,7 @@ namespace WallBase.Framework.FileSystem
     /// <remarks>
     ///     Not to be confused with System.IO.Directory, this is a virtual directory that is part of a blog based filesystem
     /// </remarks>
-    public partial class Directory : BusinessBase<Directory, Guid>, IComparable<Directory>
+    public partial class Directory : IComparable<Directory>
     {
         #region Fields & Constants
         /// <summary>
@@ -28,7 +27,7 @@ namespace WallBase.Framework.FileSystem
         /// is root directory?
         /// </summary>
         private bool isroot;
-        
+
         /// <summary>
         /// parent directory
         /// </summary>
@@ -246,7 +245,7 @@ namespace WallBase.Framework.FileSystem
         /// <summary>
         /// Not implemented. Throws a NotImplementedException.
         /// </summary>
-        protected override void ValidationRules()
+        protected  void ValidationRules()
         {
             throw new NotImplementedException();
         }
@@ -254,7 +253,7 @@ namespace WallBase.Framework.FileSystem
         /// <summary>
         /// Not implemented. Throws a NotImplementedException.
         /// </summary>
-        protected override void DataUpdate()
+        protected  void DataUpdate()
         {
             throw new NotImplementedException();
         }
@@ -264,7 +263,7 @@ namespace WallBase.Framework.FileSystem
         /// </summary>
         /// <para>unused</para>
         /// <returns>Nothing</returns>
-        protected override Directory DataSelect(Guid id)
+        protected  Directory DataSelect(Guid id)
         {
             throw new NotImplementedException();
         }
@@ -272,7 +271,7 @@ namespace WallBase.Framework.FileSystem
         /// <summary>
         /// Not implemented. Throws a NotImplementedException.
         /// </summary>
-        protected override void DataInsert()
+        protected  void DataInsert()
         {
             throw new NotImplementedException();
         }
@@ -280,7 +279,7 @@ namespace WallBase.Framework.FileSystem
         /// <summary>
         /// Not implemented. Throws a NotImplementedException.
         /// </summary>
-        protected override void DataDelete()
+        protected  void DataDelete()
         {
             throw new NotImplementedException();
         }

@@ -13,47 +13,31 @@ namespace WallBase.Controllers
 {
     public class HomeController : Controller
     {
-        private IValueCalculator calc;
-        private WallpapersManager wallpapersManager;
-        public HomeController(IValueCalculator calcParam, WallpapersManager q)
+        private readonly WallpapersService WallpapersService;
+        public HomeController( WallpapersService wallpapersService)
         {
-            calc = calcParam;
-            wallpapersManager = q;
+            WallpapersService = wallpapersService;
         }
 
 
         [OutputCache(Duration = 60)]
         public ActionResult Index()
         {
-
-            var z = new List<string>();
-            z.Add("qwe");
-            z.Add("wrewew");
-            ViewBag.Message = calc.ValueProducts(z);
-
-
-
-
-
             return View();
         }
 
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
-            wallpapersManager.Get(1);
             return View();
         }
         [OutputCache(Duration = 3600, VaryByParam = "none")]
-        public ActionResult UploadsListing()
-        {
-            ViewBag.Message = "Your application description page.";
+        public ActionResult UploadsListing(){
 
             return View();
         }
         public ActionResult Upload()
         {
-            ViewBag.Message = "Your application description page.";
 
             return View();
         }
@@ -67,9 +51,7 @@ namespace WallBase.Controllers
         {
             ViewBag.Message = "Your contact page.";
             var model = new List<ImageModel>();
-            var wallpapers = wallpapersManager.GetAll();
-            DirectoryInfo sd = new DirectoryInfo(Server.MapPath("~/App_Data/"));
-            var files = sd.EnumerateFiles();
+            var wallpapers = WallpapersService.GetAll();
             foreach (var file in wallpapers)
             {
                 model.Add(new ImageModel
@@ -87,13 +69,13 @@ namespace WallBase.Controllers
 
 
         //   [Route("home/wallpapers/{size}/{day}")]  //thumb/
-        public FileResult Wallpapers(string size, int day) //string thumb2
-        {
-            string path = HttpContext.Server.MapPath("~/App_Data/LaQ-6CnlCho.jpg");
-            byte[] fileBytes = System.IO.File.ReadAllBytes(path);
-            string fileName = "myfile.jpg";
-            return File(fileBytes, System.Net.Mime.MediaTypeNames.Application.Octet, fileName);
-        }
+        //public FileResult Wallpapers(string size, int day) //string thumb2
+        //{
+        //    string path = HttpContext.Server.MapPath("~/App_Data/LaQ-6CnlCho.jpg");
+        //    byte[] fileBytes = System.IO.File.ReadAllBytes(path);
+        //    string fileName = "myfile.jpg";
+        //    return File(fileBytes, System.Net.Mime.MediaTypeNames.Application.Octet, fileName);
+        //}
 
 
     }

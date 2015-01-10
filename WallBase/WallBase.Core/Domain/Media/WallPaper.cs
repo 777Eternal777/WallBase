@@ -1,6 +1,5 @@
 using System;
 using System.Runtime.CompilerServices;
-using Nop.Core;
 
 namespace WallBase.Core.Domain.Media
 {

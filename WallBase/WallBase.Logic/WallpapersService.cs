@@ -8,11 +8,11 @@ using WallBase.Core.Domain.Media;
 
 namespace WallBase.Logic
 {
-   public class WallpapersManager
+   public class WallpapersService
    {
        private IRepository<Wallpaper, int> wallpapersRepository;
 
-       public WallpapersManager(IRepository<Wallpaper, int> wallpapersRepository)
+       public WallpapersService(IRepository<Wallpaper, int> wallpapersRepository)
        {
            this.wallpapersRepository = wallpapersRepository;
        }

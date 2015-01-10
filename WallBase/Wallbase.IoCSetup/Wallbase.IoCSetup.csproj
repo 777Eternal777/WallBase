@@ -81,9 +81,9 @@
       <Project>{e52b3b50-143d-4f85-9e42-7434644ef07f}</Project>
       <Name>SharpRepository.EfRepository</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WallBase.Ioc.Ninject\SharpRepository.Ioc.Ninject.csproj">
+    <ProjectReference Include="..\WallBase.Ioc.Ninject\WallBase.Ioc.Ninject.csproj">
       <Project>{549f87cc-3b00-4b45-94c9-517422556f8a}</Project>
-      <Name>SharpRepository.Ioc.Ninject</Name>
+      <Name>WallBase.Ioc.Ninject</Name>
     </ProjectReference>
     <ProjectReference Include="..\WallBase.Logic\WallBase.Logic.csproj">
       <Project>{86a7ce9b-e4e4-4301-85d5-d70239ac7835}</Project>
@@ -93,9 +93,9 @@
       <Project>{dc40febe-2e39-4cb8-ae11-dfe9f6865bd2}</Project>
       <Name>SharpRepository.MongoDbRepository</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WallBase.Repository\WallBase.Repository.csproj">
+    <ProjectReference Include="..\WallBase.Repository\SharpRepository.Repository.csproj">
       <Project>{710dee79-25ce-4f68-b8b1-d08a135ad154}</Project>
-      <Name>WallBase.Repository</Name>
+      <Name>SharpRepository.Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

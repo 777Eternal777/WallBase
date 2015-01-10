@@ -22,11 +22,6 @@ namespace WallBase.Core
             return obj != null && Equals(obj.Id, default(int));
         }
 
-        private Type GetUnproxiedType()
-        {
-            return GetType();
-        }
-
         public virtual bool Equals(BaseEntity other)
         {
             if (other == null)
@@ -39,8 +34,8 @@ namespace WallBase.Core
                 !IsTransient(other) &&
                 Equals(Id, other.Id))
             {
-                var otherType = other.GetUnproxiedType();
-                var thisType = GetUnproxiedType();
+                var otherType = other.GetType();
+                var thisType = GetType();
                 return thisType.IsAssignableFrom(otherType) ||
                         otherType.IsAssignableFrom(thisType);
             }

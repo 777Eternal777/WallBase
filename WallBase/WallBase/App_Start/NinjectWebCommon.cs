@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Ninject.Web.Mvc;
-using SharpRepository.Ioc.Ninject;
+using WallBase.Ioc.Ninject;
 using Wallbase.IoCSetup;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(WallBase.App_Start.NinjectWebCommon), "Start")]
