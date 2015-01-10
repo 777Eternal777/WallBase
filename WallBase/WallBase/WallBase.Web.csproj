@@ -208,8 +208,6 @@
     <Compile Include="Handlers\ImageHandler.cs" />
     <Compile Include="Handlers\RatingHandler.cs" />
     <Compile Include="HttpModules\CompressionModule.cs" />
-    <Compile Include="HttpModules\ReferrerModule.cs" />
-    <Compile Include="HttpModules\WwwSubDomainModule.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ImageModel.cs" />

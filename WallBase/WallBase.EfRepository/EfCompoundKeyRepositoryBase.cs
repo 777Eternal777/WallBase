@@ -1,9 +1,6 @@
 using System;
 using System.Data.Entity;
 using System.Linq;
-using SharpRepository.Repository;
-using SharpRepository.Repository.Caching;
-using SharpRepository.Repository.FetchStrategies;
 
 namespace SharpRepository.EfRepository
 {
